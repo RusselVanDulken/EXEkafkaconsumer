@@ -1,0 +1,32 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: userservice
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        # 服务的注册地址
+        server-addr: 192.168.65.131:8848
+        # 集群名称
+        cluster-name: SH
+      config:
+        # 服务的配置地址
+        server-addr: 192.168.65.131:8848
+        # 配置文件格式
+        file-extension: yaml
+mybatis:
+  type-aliases-package: cn.itcast.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka

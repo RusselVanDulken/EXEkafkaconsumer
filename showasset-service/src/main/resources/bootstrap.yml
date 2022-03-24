@@ -13,7 +13,7 @@ spring:
 #        server-addr: 10.16.105.141:8848
         file-extension: yml
   datasource:
-    url: jdbc:mysql://localhost:3306/masscan?useSSL=false
+    url: jdbc:mysql://localhost:3306/exercise?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
